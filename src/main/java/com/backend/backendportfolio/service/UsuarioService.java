@@ -10,25 +10,26 @@ import com.backend.backendportfolio.repository.UsuarioRepository;
 
 @Service
 public class UsuarioService {
+	
 	@Autowired
 	private UsuarioRepository usuarioRepository;
 	
-	public List<Usuario> findAll(){
+	public List<Usuario> traerUsuarios(){
 		return usuarioRepository.findAll();
 		
 	}
 	
-	public Usuario save(Usuario usuario) {
+	public Usuario guardarUsuario(Usuario usuario) {
 		return usuarioRepository.save(usuario);
 	}
 	
 	
-	public Usuario get(Integer id) {
+	public Usuario traerUsuario(Integer id) {
 		return usuarioRepository.getReferenceById(id);
 	}
 	
 	
-	public void delete(Integer id) {
+	public void borrarUsuario(Integer id) {
 		usuarioRepository.deleteById(id);
 	}
 	
