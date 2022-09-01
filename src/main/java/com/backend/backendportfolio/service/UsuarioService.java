@@ -23,6 +23,10 @@ public class UsuarioService {
 		return usuarioRepository.save(usuario);
 	}
 	
+	public Usuario editarUsuario(Usuario usuario) {
+		return usuarioRepository.save(usuario);
+	}
+	
 	
 	public Usuario traerUsuario(Integer id) {
 		return usuarioRepository.getReferenceById(id);

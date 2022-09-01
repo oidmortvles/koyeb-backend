@@ -19,12 +19,16 @@ public class ProyectoService {
 		
 	}
 	
+	public Proyecto editarProyecto(Proyecto proyecto) {
+		return proyectoRepository.save(proyecto);
+	}
+	
 	public Proyecto guardarProyecto(Proyecto proyecto) {
 		return proyectoRepository.save(proyecto);
 	}
 	
 	public Proyecto traerProyecto(Integer id) {
-		return proyectoRepository.getReferenceById(id);
+		return proyectoRepository.findById(id).orElse(null);
 	}
 	
 	public void borrarProyecto (Integer id) {

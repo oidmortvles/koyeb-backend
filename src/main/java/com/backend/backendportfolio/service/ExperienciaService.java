@@ -20,12 +20,16 @@ public class ExperienciaService {
 		
 	}
 	
+	public Experiencia editarExperiencia(Experiencia experiencia) {
+		return experienciaRepository.save(experiencia);
+	}
+	
 	public Experiencia guardarExperiencia(Experiencia experiencia) {
 		return experienciaRepository.save(experiencia);
 	}
 	
 	public Experiencia traerExperiencia(Integer id) {
-		return experienciaRepository.getReferenceById(id);
+		return experienciaRepository.findById(id).orElse(null);
 	}
 	
 	public void borrarExperiencia(Integer id) {

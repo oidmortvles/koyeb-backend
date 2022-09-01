@@ -14,17 +14,21 @@ public class SkillService {
 	@Autowired
 	private SkillRepository skillRepository;
 	
-	public List<Skill> traerSkill(){
+	public List<Skill> traerSkills(){
 		return skillRepository.findAll();
 		
 	} 
+	
+	public Skill editarSkill(Skill skill) {
+		return skillRepository.save(skill);
+	}
 	
 	public Skill guardarSkill(Skill skill) {
 		return skillRepository.save(skill);
 	}
 	
-	public Skill getSkill(Integer id) {
-		return skillRepository.getReferenceById(id);
+	public Skill traerSkill(Integer id) {
+		return skillRepository.findById(id).orElse(null);
 	}
 	
 	public void borrarSkill(Integer id) {

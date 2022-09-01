@@ -20,13 +20,17 @@ public class EducacionService {
 		
 	}
 	
+	public Educacion editarInsituto(Educacion educacion) {
+		return educacionRepository.save(educacion);
+	}
+	
 	public Educacion guardarInstituto(Educacion educacion) {
 		return educacionRepository.save(educacion);
 	}
 	
 	
 	public Educacion traerInstituto(Integer id) {
-		return educacionRepository.getReferenceById(id);
+		return educacionRepository.findById(id).orElse(null);
 	}
 	
 	
