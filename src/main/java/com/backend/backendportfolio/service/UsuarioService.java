@@ -28,14 +28,15 @@ public class UsuarioService {
 	}
 	
 	
-	public Usuario traerUsuario(Integer id) {
+	public Usuario traerUsuario(Long id) {
 		return usuarioRepository.getReferenceById(id);
 	}
 	
 	
-	public void borrarUsuario(Integer id) {
+	public void borrarUsuario(Long id) {
 		usuarioRepository.deleteById(id);
 	}
+	
 	
 	
 	

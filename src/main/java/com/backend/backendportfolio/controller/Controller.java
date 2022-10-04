@@ -24,9 +24,12 @@ import com.backend.backendportfolio.service.ProyectoService;
 import com.backend.backendportfolio.service.SkillService;
 import com.backend.backendportfolio.service.UsuarioService;
 
+
+
 @RestController
 @RequestMapping("")
 public class Controller {
+
 	
 	//USUARIO
 	@Autowired
@@ -45,7 +48,7 @@ public class Controller {
 	}
 	
 	@DeleteMapping ("/usuario/delete/{id}")
-	public void borrarUsuario (@PathVariable Integer id) {
+	public void borrarUsuario (@PathVariable long id) {
 		usuarioService.borrarUsuario(id);
 	}
 	
@@ -186,6 +189,11 @@ public class Controller {
 		educacionService.editarInsituto(educacion);
 		
 	}
+	
+	
+	//TOKEN
+	
+	
 	
 	
 	
