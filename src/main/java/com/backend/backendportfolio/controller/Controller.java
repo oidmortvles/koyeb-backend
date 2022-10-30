@@ -1,5 +1,6 @@
 package com.backend.backendportfolio.controller;
 
+import java.security.Principal;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,6 +45,13 @@ public class Controller {
 	}
 	
 	@GetMapping("/usuario")
+	@ResponseBody
+	public Usuario traerUsuario(Principal principal){
+		return (Usuario) usuarioService.findByUsername(principal.getName());
+	}
+	
+	
+	@GetMapping("/usuarios")
 	@ResponseBody
 	public List<Usuario> TraerUsuarios(){
 		return usuarioService.traerUsuarios();
@@ -161,6 +169,7 @@ public class Controller {
 	
 	
 	//EDUCACION
+	
 	@Autowired
 	private EducacionService educacionService;
 	
