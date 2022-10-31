@@ -30,7 +30,7 @@ import com.backend.backendportfolio.service.UsuarioService;
 
 @RestController
 @CrossOrigin("*")
-@RequestMapping("/")
+@RequestMapping("/port")
 public class Controller {
 
 	
