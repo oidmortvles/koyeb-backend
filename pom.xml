@@ -16,7 +16,7 @@
 	<name>backend-portfolio</name>
 	<description>Backend-Portfolio</description>
 	<properties>
-		<java.version>11.0.16</java.version>
+		<java.version>11</java.version>
 		<maven.compiler.source>1.8</maven.compiler.source>
  		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
@@ -97,13 +97,7 @@
 
 	<build>
 		<plugins>
-		<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-surefire-plugin</artifactId>
-    <configuration>
-        <testFailureIgnore>true</testFailureIgnore>
-    </configuration>
-</plugin>
+		
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
